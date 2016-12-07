@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ServiciosWeb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ServiciosWeb/">
+
+<xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario"/>
+
+<xs:element name="ActualizarUsuarioImg" type="tns:ActualizarUsuarioImg"/>
+
+<xs:element name="ActualizarUsuarioImgResponse" type="tns:ActualizarUsuarioImgResponse"/>
+
+<xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse"/>
+
+<xs:element name="AutomovilName" type="tns:AutomovilName"/>
+
+<xs:element name="AutomovilNameResponse" type="tns:AutomovilNameResponse"/>
+
+<xs:element name="CmbEstado" type="tns:CmbEstado"/>
+
+<xs:element name="CmbEstadoResponse" type="tns:CmbEstadoResponse"/>
+
+<xs:element name="CmbMunicipio" type="tns:CmbMunicipio"/>
+
+<xs:element name="CmbMunicipioResponse" type="tns:CmbMunicipioResponse"/>
+
+<xs:element name="DetaPerson" type="tns:DetaPerson"/>
+
+<xs:element name="DetaPersonResponse" type="tns:DetaPersonResponse"/>
+
+<xs:element name="DocumentQR" type="tns:DocumentQR"/>
+
+<xs:element name="DocumentQRResponse" type="tns:DocumentQRResponse"/>
+
+<xs:element name="EliminarUsuario" type="tns:EliminarUsuario"/>
+
+<xs:element name="EliminarUsuarioResponse" type="tns:EliminarUsuarioResponse"/>
+
+<xs:element name="Estadoname" type="tns:Estadoname"/>
+
+<xs:element name="EstadonameResponse" type="tns:EstadonameResponse"/>
+
+<xs:element name="InsertImage" type="tns:InsertImage"/>
+
+<xs:element name="InsertImageResponse" type="tns:InsertImageResponse"/>
+
+<xs:element name="InsertOrden" type="tns:InsertOrden"/>
+
+<xs:element name="InsertOrdenResponse" type="tns:InsertOrdenResponse"/>
+
+<xs:element name="InsertarUsuario" type="tns:InsertarUsuario"/>
+
+<xs:element name="InsertarUsuarioResponse" type="tns:InsertarUsuarioResponse"/>
+
+<xs:element name="LicencName" type="tns:LicencName"/>
+
+<xs:element name="LicencNameResponse" type="tns:LicencNameResponse"/>
+
+<xs:element name="MostrarUsuarios" type="tns:MostrarUsuarios"/>
+
+<xs:element name="MostrarUsuariosResponse" type="tns:MostrarUsuariosResponse"/>
+
+<xs:element name="NameID" type="tns:NameID"/>
+
+<xs:element name="NameIDResponse" type="tns:NameIDResponse"/>
+
+<xs:element name="NumeroFinal" type="tns:NumeroFinal"/>
+
+<xs:element name="NumeroFinalResponse" type="tns:NumeroFinalResponse"/>
+
+<xs:element name="QRcode" type="tns:QRcode"/>
+
+<xs:element name="QRcodeResponse" type="tns:QRcodeResponse"/>
+
+<xs:element name="Recuperarimage" type="tns:Recuperarimage"/>
+
+<xs:element name="RecuperarimageResponse" type="tns:RecuperarimageResponse"/>
+
+<xs:element name="TPAutoUser" type="tns:TPAutoUser"/>
+
+<xs:element name="TPAutoUserResponse" type="tns:TPAutoUserResponse"/>
+
+<xs:element name="TPLicenciaConductor" type="tns:TPLicenciaConductor"/>
+
+<xs:element name="TPLicenciaConductorResponse" type="tns:TPLicenciaConductorResponse"/>
+
+<xs:element name="UpdateUsuarios" type="tns:UpdateUsuarios"/>
+
+<xs:element name="UpdateUsuariosResponse" type="tns:UpdateUsuariosResponse"/>
+
+<xs:element name="UsuarioUnico" type="tns:UsuarioUnico"/>
+
+<xs:element name="UsuarioUnicoResponse" type="tns:UsuarioUnicoResponse"/>
+
+<xs:element name="ValidarUsuario" type="tns:ValidarUsuario"/>
+
+<xs:element name="ValidarUsuarioResponse" type="tns:ValidarUsuarioResponse"/>
+
+<xs:complexType name="MostrarUsuarios">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="MostrarUsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="contresena" type="xs:string" minOccurs="0"/>
+<xs:element name="correoElectronico" type="xs:string" minOccurs="0"/>
+<xs:element name="idUsuario" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="sexo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Recuperarimage">
+<xs:sequence>
+<xs:element name="iduser" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RecuperarimageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertImage">
+<xs:sequence>
+<xs:element name="Ruta" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertImageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LicencName">
+<xs:sequence>
+<xs:element name="idli" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LicencNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tLicencia" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tLicencia">
+<xs:sequence>
+<xs:element name="idlicencia" type="xs:int"/>
+<xs:element name="NLicencia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CmbEstado">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CmbEstadoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estado" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estado">
+<xs:sequence>
+<xs:element name="idEstado" type="xs:int"/>
+<xs:element name="NEstado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarUsuarioImg">
+<xs:sequence>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="Sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="Contracena" type="xs:string" minOccurs="0"/>
+<xs:element name="IdUsuario" type="xs:int"/>
+<xs:element name="RutaImg" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarUsuarioImgResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CmbMunicipio">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CmbMunicipioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:municipio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="municipio">
+<xs:sequence>
+<xs:element name="idForeignMunicipio" type="xs:int"/>
+<xs:element name="idMunicipio" type="xs:int"/>
+<xs:element name="municipio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DetaPerson">
+<xs:sequence>
+<xs:element name="Code" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DetaPersonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:resultadoProcedure" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resultadoProcedure">
+<xs:sequence>
+<xs:element name="apellidosCuenta" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="conductor" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="municipioDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="municipioOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreCuenta" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoLicencia" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoTranspirte" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NumeroFinal">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="NumeroFinalResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ordenQR" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ordenQR">
+<xs:sequence>
+<xs:element name="apellidosCuenta" type="xs:string" minOccurs="0"/>
+<xs:element name="conductor" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="municipioDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="municipioOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreCuenta" type="xs:string" minOccurs="0"/>
+<xs:element name="ordenId" type="xs:int"/>
+<xs:element name="tipoLicencia" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoTranspirte" type="xs:string" minOccurs="0"/>
+<xs:element name="usuarioid" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TPAutoUser">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="TPAutoUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tpAuto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tpAuto">
+<xs:sequence>
+<xs:element name="idAuto" type="xs:int"/>
+<xs:element name="NAutomovil" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateUsuarios">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateUsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DocumentQR">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DocumentQRResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:codeQR" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="codeQR">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="idcode_fk" type="xs:int"/>
+<xs:element name="idfokeing_key" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NameID">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NameIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AutomovilName">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AutomovilNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tpAuto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="QRcode">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="idOrden" type="xs:int"/>
+<xs:element name="Code" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="QRcodeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarUsuario">
+<xs:sequence>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="Sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="Contracena" type="xs:string" minOccurs="0"/>
+<xs:element name="IdUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TPLicenciaConductor">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="TPLicenciaConductorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tLicencia" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ValidarUsuario">
+<xs:sequence>
+<xs:element name="CorreoElectronico" type="xs:string" minOccurs="0"/>
+<xs:element name="Contracena" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ValidarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UsuarioUnico">
+<xs:sequence>
+<xs:element name="CorreoElectrinico" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UsuarioUnicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertOrden">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="EstOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="MunOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="EstDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="MunDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="Conductor" type="xs:string" minOccurs="0"/>
+<xs:element name="TipoTransporte" type="xs:string" minOccurs="0"/>
+<xs:element name="TipoLicencia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertOrdenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Estadoname">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EstadonameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estado" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarUsuario">
+<xs:sequence>
+<xs:element name="Nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="Apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="Sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="CorreoElectrinico" type="xs:string" minOccurs="0"/>
+<xs:element name="Contracena" type="xs:string" minOccurs="0"/>
+<xs:element name="Ruta" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
